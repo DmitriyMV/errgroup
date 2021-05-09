@@ -1,0 +1,38 @@
+run:
+  # include test files or not, default is true
+  tests: false
+
+linters-settings:
+  gocritic:
+    disabled-tags:
+      - style
+    enabled_tags:
+      - diagnostic
+      - experimental
+      - performance
+  goimports:
+    local-prefixes: github.com/cpatools/binom-go
+  govet:
+    check-shadowing: true
+    disable:
+      - fieldalignment
+    enable-all: true
+
+linters:
+  enable:
+    - errorlint
+    - exportloopref
+    - cyclop
+    - goconst
+    - gocritic
+    - goimports
+    - gosec
+    - makezero
+    - nakedret
+    - nilerr
+    - nolintlint
+    - predeclared
+    - thelper
+    - tparallel
+    - unconvert
+    - wastedassign
